@@ -3,3 +3,6 @@
   command = "npm run build"
   publish = "build"
   environment = { NODE_VERSION = "20" }
+
+[build.environment]
+  REACT_APP_API_URL = "https://hamman-portfolio-backend.onrender.com/api"
