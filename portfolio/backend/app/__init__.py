@@ -35,10 +35,17 @@ def create_app():
     db.init_app(app)
     migrate = Migrate(app, db)
 
-    # Enable CORS for all routes - allow frontend from port 3000
+    # Enable CORS for all routes - allow frontend from port 3000 and Vercel
     CORS(app, resources={
         r"/api/*": {
-            "origins": ["http://localhost:3000", "http://127.0.0.1:3000", "http://0.0.0.0:3000", os.environ.get('FRONTEND_URL', '*')]
+            "origins": [
+                "http://localhost:3000", 
+                "http://127.0.0.1:3000", 
+                "http://0.0.0.0:3000", 
+                "https://hamanporfolio.vercel.app", 
+                "https://*.vercel.app", 
+                os.environ.get('FRONTEND_URL', '*')
+            ]
         }
     })
 
