@@ -10,6 +10,7 @@ redirects = []
 publish = "/home/la-patrona/haman_porfolio/portfolio/frontend/build"
 publishOrigin = "ui"
 commandOrigin = "ui"
+base = "/home/la-patrona/haman_porfolio/portfolio/frontend"
 command = "npm run build"
 
 [build.environment]
