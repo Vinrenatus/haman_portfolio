@@ -118,6 +118,112 @@ npm install
 # Create .env file with the following content:
 cat << EOF > .env
 REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_CONTACT_EMAIL=hamanmuraya009@gmail.com
+REACT_APP_CONTACT_PHONE=+1 (253) 378-4293
+REACT_APP_CONTACT_LOCATION=32115 105th PL SE Auburn WA
+REACT_APP_LINKEDIN_URL=https://linkedin.com/in/hamman-muraya-8b3744397
+REACT_APP_GITHUB_URL=https://github.com/MurayaSoftTouch
+REACT_APP_TWITTER_URL=https://twitter.com/hamanmuraya
+REACT_APP_PORTFOLIO_URL=https://hamanporfolio.vercel.app/
+EOF
+
+# Start the development server
+npm start
+```
+> The frontend will be available at http://localhost:3000 🌐
+
+### 🖥️ Running Both Servers Simultaneously
+
+#### Method 1: Separate Terminals
+1. **Terminal 1 (Backend):**
+   ```bash
+   cd portfolio/backend
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   python run.py
+   ```
+
+2. **Terminal 2 (Frontend):**
+   ```bash
+   cd portfolio/frontend
+   npm start
+   ```
+
+#### Method 2: Using Concurrently (if installed globally)
+```bash
+# Install concurrently globally (if not already installed)
+npm install -g concurrently
+
+# From the portfolio root directory
+cd portfolio
+concurrently "cd backend && source venv/bin/activate && python run.py" "cd frontend && npm start"
+```
+
+#### Method 3: Using Background Processes
+```bash
+# Navigate to portfolio directory
+cd portfolio
+
+# Start backend in background
+cd backend
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+python run.py &
+BACKEND_PID=$!
+
+# Wait a moment for backend to start
+sleep 3
+
+# Start frontend
+cd ../frontend
+npm start
+
+# To stop backend later, use: kill $BACKEND_PID
+```
+
+#### Method 4: Using Docker Compose (Alternative)
+```bash
+# Navigate to portfolio directory
+cd portfolio
+
+# Build and run both services
+docker-compose up --build
+```
+
+### 🛠️ Troubleshooting Common Issues
+
+#### Backend Issues
+- **Port already in use**: Change PORT environment variable or kill the process using the port
+- **Database connection errors**: Ensure PostgreSQL is running and credentials are correct
+- **Missing dependencies**: Run `pip install -r requirements.txt` again
+
+#### Frontend Issues
+- **Port already in use**: Change PORT environment variable in .env file
+- **API connection errors**: Ensure backend is running and REACT_APP_API_URL is correct
+- **Module not found**: Run `npm install` to reinstall dependencies
+
+#### Environment Setup
+Make sure your environment variables are properly set:
+- Backend: `DATABASE_URL`, `SECRET_KEY`, `FLASK_ENV`
+- Frontend: `REACT_APP_API_URL`, and other contact variables
+
+# Initialize database
+python init_db.py
+
+# Run the backend server
+python run.py
+```
+> The backend will be available at http://localhost:5000 🌐
+
+#### ⚛️ Frontend Setup
+```bash
+# Navigate to frontend directory
+cd portfolio/frontend
+
+# Install dependencies
+npm install
+
+# Create .env file with the following content:
+cat << EOF > .env
+REACT_APP_API_URL=http://localhost:5000/api
 REACT_APP_CONTACT_EMAIL=muraya.h@yahoo.com
 REACT_APP_CONTACT_PHONE=+44-747-123-4567
 REACT_APP_CONTACT_LOCATION=Lincoln, Lincolnshire, England
@@ -130,6 +236,40 @@ EOF
 npm start
 ```
 > The frontend will be available at http://localhost:3000 🌐
+
+
+# Start frontend
+cd ../frontend
+npm start
+
+# To stop backend later, use: kill $BACKEND_PID
+```
+
+#### Method 4: Using Docker Compose (Alternative)
+```bash
+# Navigate to portfolio directory
+cd portfolio
+
+# Build and run both services
+docker-compose up --build
+```
+
+### 🛠️ Troubleshooting Common Issues
+
+#### Backend Issues
+- **Port already in use**: Change PORT environment variable or kill the process using the port
+- **Database connection errors**: Ensure PostgreSQL is running and credentials are correct
+- **Missing dependencies**: Run `pip install -r requirements.txt` again
+
+#### Frontend Issues
+- **Port already in use**: Change PORT environment variable in .env file
+- **API connection errors**: Ensure backend is running and REACT_APP_API_URL is correct
+- **Module not found**: Run `npm install` to reinstall dependencies
+
+#### Environment Setup
+Make sure your environment variables are properly set:
+- Backend: `DATABASE_URL`, `SECRET_KEY`, `FLASK_ENV`
+- Frontend: `REACT_APP_API_URL`, and other contact variables
 
 ## 📡 API Endpoints
 
