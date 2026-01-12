@@ -81,7 +81,7 @@ A cutting-edge portfolio website showcasing the skills and projects of **Hamman 
 | Primary | #FF6B35 | Main brand color (orange) |
 | Secondary | #F7931E | Supporting color (orange) |
 | Accent | #FFD700 | Highlight elements (gold) |
-| Text | #000000 / #FFFFFF | High contrast text in light/dark mode |
+| Text | #111827 / #FFFFFF | High contrast text in light/dark mode |
 | Background | #ffffff / #000080 | Light/dark mode backgrounds |
 
 ## 🚀 Quick Start

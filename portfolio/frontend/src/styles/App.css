@@ -31,7 +31,7 @@
   --secondary-color: #FFA500; /* Orange */
   --accent-color: #FF6B35; /* Orange accent for contrast */
   --text-color: #ffffff; /* White text for better contrast */
-  --light-text: #e5e7eb; /* Light gray text */
+  --light-text: #d1d5db; /* Lighter gray text for secondary text */
   --bg-color: #000080; /* Navy blue dark */
   --card-bg: #1a1a9e; /* Slightly lighter navy */
   --border-color: #4f46e5; /* Indigo border for contrast */
@@ -51,8 +51,8 @@
   --primary-color: #FF6B35; /* Orange */
   --secondary-color: #F7931E; /* Secondary orange */
   --accent-color: #FFD700; /* Gold accent */
-  --text-color: #000000; /* Black text for better contrast */
-  --light-text: #4b5563; /* Darker gray text */
+  --text-color: #111827; /* Dark blue-gray text for better contrast */
+  --light-text: #4b5563; /* Darker gray text for secondary text */
   --bg-color: #ffffff; /* White background */
   --card-bg: #f9fafb; /* Light gray card background */
   --border-color: #d1d5db; /* Medium gray border */
@@ -213,6 +213,20 @@ body {
   color: white;
   transform: translateY(-2px);
   box-shadow: var(--hover-shadow);
+}
+
+/* Ensure proper contrast in both themes */
+[data-theme="dark"] .btn-primary {
+  color: #000000; /* Black text for better contrast on gold/orange buttons */
+}
+
+[data-theme="dark"] .btn-secondary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  color: white;
 }
 
 /* Card styles */
@@ -392,7 +406,7 @@ body {
 }
 
 [data-theme="dark"] .navbar {
-  background-color: rgba(17, 24, 39, 0.95);
+  background-color: rgba(0, 0, 128, 0.95); /* Navy blue background for better contrast */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
