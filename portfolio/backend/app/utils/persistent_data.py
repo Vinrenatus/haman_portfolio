@@ -119,7 +119,7 @@ def get_default_data():
                 "title": "Professor of Software Engineering",
                 "company": "California State University",
                 "content": "Hamman demonstrated exceptional research abilities and technical expertise during his PhD. His work on scalable microservices architecture has contributed significantly to our research program.",
-                "avatar": "/images/sarah-mitchell.jpg"
+                "avatar": "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg"
             },
             {
                 "id": 2,
@@ -127,7 +127,7 @@ def get_default_data():
                 "title": "Head of Engineering",
                 "company": "Power Financial Wellness",
                 "content": "Hamman's cloud architecture skills are outstanding. He designed and implemented a scalable cloud architecture that supported 15,000+ users and processed over $2M in transactions securely.",
-                "avatar": "/images/james-kariuki.jpg"
+                "avatar": "https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg"
             },
             {
                 "id": 3,
@@ -135,7 +135,7 @@ def get_default_data():
                 "title": "VP Engineering",
                 "company": "Data Annotation",
                 "content": "Hamman led the implementation of a cloud-native microservices architecture that improved system performance by 300% and reduced operational costs by 25%.",
-                "avatar": "/images/michael-chen.jpg"
+                "avatar": "https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg"
             }
         ],
         "articles": [
@@ -208,7 +208,7 @@ def get_projects_data():
             "description": "Designed and developed a full-stack emergency response platform using React, Node.js, Flask, and PostgreSQL, featuring real-time geolocation tagging and AWS cloud deployment. This platform enables rapid incident reporting and emergency response coordination, demonstrating technical innovation with real-world social impact.",
             "technologies": ["React", "Node.js", "Flask", "PostgreSQL", "AWS"],
             "link": "https://github.com/MurayaSoftTouch",
-            "image": "/images/ajali-platform.jpg",
+            "image": "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg",
             "category": "Full-Stack",
             "year": "2022"
         },
@@ -218,7 +218,7 @@ def get_projects_data():
             "description": "Led end-to-end development of a cultural e-commerce platform using React, Node.js, and Stripe payment integration, enabling Maasai artisans to sell their crafts to global markets. This project generated $15,000 in revenue within the first six months.",
             "technologies": ["React", "Node.js", "Stripe", "Payment Integration"],
             "link": "https://github.com/MurayaSoftTouch",
-            "image": "/images/maasai-ecommerce.jpg",
+            "image": "https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg",
             "category": "E-commerce",
             "year": "2021"
         },
@@ -228,7 +228,7 @@ def get_projects_data():
             "description": "Developed a native iOS application using SwiftUI for real-time cryptocurrency market data visualisation and portfolio tracking. The app features live price updates, portfolio analytics, price alerts, and secure user authentication.",
             "technologies": ["SwiftUI", "iOS Development", "Real-time Data"],
             "link": "https://github.com/MurayaSoftTouch",
-            "image": "/images/cryptocurrency-tracker.jpg",
+            "image": "https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg",
             "category": "Mobile",
             "year": "2020"
         },
@@ -238,7 +238,7 @@ def get_projects_data():
             "description": "Built a gamified STEM learning tool with Flask, PostgreSQL, and JavaScript, featuring dynamic quizzes, leaderboards, progress tracking, and adaptive learning algorithms. This educational platform makes science learning engaging and interactive, with over 1,000 questions across multiple STEM subjects.",
             "technologies": ["Flask", "PostgreSQL", "JavaScript", "Gamification"],
             "link": "https://github.com/MurayaSoftTouch",
-            "image": "/images/stem-learning.jpg",
+            "image": "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg",
             "category": "Education",
             "year": "2020"
         },
@@ -248,7 +248,7 @@ def get_projects_data():
             "description": "Co-developed a secure RESTful e-commerce backend using Flask, SQLAlchemy, and PostgreSQL, deployed on Render cloud platform with comprehensive API documentation. The platform includes user authentication, product catalog management, shopping cart functionality, and order processing capabilities.",
             "technologies": ["Flask", "SQLAlchemy", "PostgreSQL", "RESTful API"],
             "link": "https://github.com/MurayaSoftTouch",
-            "image": "/images/duka-platform.jpg",
+            "image": "https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg",
             "category": "Backend",
             "year": "2020"
         },
@@ -258,7 +258,7 @@ def get_projects_data():
             "description": "Provisioned a secure, scalable three-tier architecture on AWS using Terraform infrastructure as code, implementing EC2 for application servers, RDS for database management, and S3 for static asset storage. The infrastructure enforces least-privilege IAM policies and network segmentation for enhanced security.",
             "technologies": ["Terraform", "AWS", "EC2", "RDS", "S3", "IAM"],
             "link": "https://github.com/MurayaSoftTouch",
-            "image": "/images/aws-infrastructure.jpg",
+            "image": "https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg",
             "category": "DevOps",
             "year": "2019"
         }
