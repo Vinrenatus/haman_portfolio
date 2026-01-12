@@ -19,14 +19,14 @@
 
 /* Dark theme variables */
 [data-theme="dark"] {
-  --primary-color: #60a5fa;
-  --secondary-color: #3b82f6;
-  --accent-color: #fbbf24;
+  --primary-color: #3b82f6; /* Navy blue */
+  --secondary-color: #2563eb; /* Darker navy blue */
+  --accent-color: #fbbf24; /* Gold accent */
   --text-color: #f9fafb;
   --light-text: #d1d5db;
-  --bg-color: #111827;
-  --card-bg: #1f2937;
-  --border-color: #374151;
+  --bg-color: #000080; /* Navy blue dark */
+  --card-bg: #000066; /* Darker navy blue */
+  --border-color: #00004d; /* Even darker navy blue */
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
@@ -206,15 +206,22 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 6px;
   font-size: 1rem;
-  background-color: var(--bg-color);
+  background-color: var(--card-bg);
   color: var(--text-color);
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--light-text);
+  opacity: 0.7;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Navy blue focus ring */
 }
 
 .status-message {
