@@ -29,6 +29,7 @@ A cutting-edge portfolio website showcasing the skills and projects of **Hamman 
   - [Developer Coding](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg)
   - [Code Projection](https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg)
   - [Programming Desk](https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg)
+- 🔐 **Admin Access** - Login with email: vrugundu001@gmail.com and password: Lovelight369$
 - 🔗 **Social Media Integration** - Seamless connectivity
 
 ### 🔐 Admin Dashboard
