@@ -17,7 +17,7 @@ const AboutAdmin = () => {
 
   const fetchAboutData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/about", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/about", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -42,7 +42,7 @@ const AboutAdmin = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/about", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/about", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

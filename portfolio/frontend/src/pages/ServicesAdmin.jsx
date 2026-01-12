@@ -23,7 +23,7 @@ const ServicesAdmin = () => {
 
   const fetchServicesData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/services", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/services", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -51,7 +51,7 @@ const ServicesAdmin = () => {
       // Convert features string to array
       const featuresArray = newService.features.split(',').map(f => f.trim());
       
-      const response = await fetch("http://localhost:5000/api/services", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/services", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const ServicesAdmin = () => {
       // Convert features string to array
       const featuresArray = updatedService.features.split(',').map(f => f.trim());
       
-      const response = await fetch("http://localhost:5000/api/services", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/services", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -117,7 +117,7 @@ const ServicesAdmin = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/services", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/services", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

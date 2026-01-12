@@ -24,7 +24,7 @@ const TestimonialsAdmin = () => {
 
   const fetchTestimonialsData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/testimonials", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/testimonials", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -49,7 +49,7 @@ const TestimonialsAdmin = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/testimonials", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/testimonials", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const TestimonialsAdmin = () => {
 
   const handleUpdateTestimonial = async (index, updatedTestimonial) => {
     try {
-      const response = await fetch("http://localhost:5000/api/testimonials", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/testimonials", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +105,7 @@ const TestimonialsAdmin = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/testimonials", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/testimonials", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

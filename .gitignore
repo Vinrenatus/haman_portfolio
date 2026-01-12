@@ -1,2 +1,4 @@
 # Local Netlify folder
 .netlify
+portfolio/frontend/build/
+portfolio/frontend/node_modules/.cache/

@@ -24,7 +24,7 @@ const ArticlesAdmin = () => {
 
   const fetchArticlesData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/articles", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/articles", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -52,7 +52,7 @@ const ArticlesAdmin = () => {
       // Convert tags string to array
       const tagsArray = newArticle.tags.split(',').map(t => t.trim());
       
-      const response = await fetch("http://localhost:5000/api/articles", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/articles", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -89,7 +89,7 @@ const ArticlesAdmin = () => {
       // Convert tags string to array
       const tagsArray = updatedArticle.tags.split(',').map(t => t.trim());
 
-      const response = await fetch("http://localhost:5000/api/articles", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/articles", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -119,7 +119,7 @@ const ArticlesAdmin = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/articles", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/articles", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

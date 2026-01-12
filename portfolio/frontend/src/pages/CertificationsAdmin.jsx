@@ -25,7 +25,7 @@ const CertificationsAdmin = () => {
 
   const fetchCertificationsData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/certifications", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/certifications", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -50,7 +50,7 @@ const CertificationsAdmin = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/certifications", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/certifications", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -81,7 +81,7 @@ const CertificationsAdmin = () => {
 
   const handleUpdateCertification = async (index, updatedCert) => {
     try {
-      const response = await fetch("http://localhost:5000/api/certifications", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/certifications", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ const CertificationsAdmin = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/certifications", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/certifications", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

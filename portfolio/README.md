@@ -187,14 +187,15 @@ Set the following in your frontend `.env` file:
 REACT_APP_API_URL=http://localhost:5000/api
 
 # Contact information
-REACT_APP_CONTACT_EMAIL=muraya.h@yahoo.com
-REACT_APP_CONTACT_PHONE=+44-747-123-4567
-REACT_APP_CONTACT_LOCATION=Lincoln, Lincolnshire, England
+REACT_APP_CONTACT_EMAIL=hamanmuraya009@gmail.com
+REACT_APP_CONTACT_PHONE=+1 (253) 378-4293
+REACT_APP_CONTACT_LOCATION=32115 105th PL SE Auburn WA
 
 # Social media links
 REACT_APP_LINKEDIN_URL=https://linkedin.com/in/hamman-muraya-8b3744397
 REACT_APP_GITHUB_URL=https://github.com/MurayaSoftTouch
 REACT_APP_TWITTER_URL=https://twitter.com/hammanmuraya
+REACT_APP_PORTFOLIO_URL=https://hamanporfolio.vercel.app/
 ```
 
 ## 🚀 Deployment Options
@@ -234,6 +235,137 @@ The application is ready for deployment on:
 - [AWS](https://aws.amazon.com/) ☁️
 - [Google Cloud](https://cloud.google.com/) ☁️
 - [Azure](https://azure.microsoft.com/) ☁️
+
+### 🌐 Vercel Deployment
+
+#### Prerequisites
+- Sign up for a [Vercel account](https://vercel.com/signup)
+- Install the [Vercel CLI](https://vercel.com/cli) (optional): `npm i -g vercel`
+
+#### Deployment Steps
+1. **Prepare your frontend for Vercel deployment:**
+   - Navigate to the frontend directory: `cd portfolio/frontend`
+   - Ensure your `package.json` has the correct build script
+   - Create/update your `.env.production` file with production environment variables:
+     ```
+     REACT_APP_API_URL=https://your-backend-url.com/api
+     REACT_APP_CONTACT_EMAIL=your-email@example.com
+     REACT_APP_CONTACT_PHONE=+1-234-567-8900
+     REACT_APP_CONTACT_LOCATION=City, Country
+     REACT_APP_LINKEDIN_URL=https://linkedin.com/in/your-profile
+     REACT_APP_GITHUB_URL=https://github.com/your-profile
+     REACT_APP_TWITTER_URL=https://twitter.com/your-profile
+     ```
+
+2. **Deploy to Vercel:**
+   - Option 1 (Recommended): Link your GitHub repository to Vercel
+     - Go to [Vercel Dashboard](https://vercel.com/dashboard)
+     - Click "New Project" → "Import Git Repository"
+     - Select your portfolio repository
+     - Configure the project settings:
+       - Framework Preset: `Create React App`
+       - Build Command: `npm run build`
+       - Output Directory: `build`
+       - Root Directory: `portfolio/frontend`
+     - Add your environment variables in the "Environment Variables" section
+     - Click "Deploy"
+
+   - Option 2 (Using Vercel CLI):
+     ```bash
+     cd portfolio/frontend
+     vercel --prod
+     ```
+     Follow the prompts to configure your project and add environment variables.
+
+3. **Configure Custom Domain (Optional):**
+   - In your Vercel dashboard, go to your project settings
+   - Navigate to "Domains" and add your custom domain
+   - Update DNS settings as instructed
+
+4. **Post-Deployment:**
+   - Your application will be accessible at `https://your-project-name.vercel.app`
+   - Monitor deployments in your Vercel dashboard
+   - Set up automatic deployments from your Git repository
+
+### 🌐 Netlify Deployment
+
+#### Prerequisites
+- Sign up for a [Netlify account](https://app.netlify.com/signup)
+
+#### Deployment Steps
+1. **Prepare your frontend for Netlify deployment:**
+   - Navigate to the frontend directory: `cd portfolio/frontend`
+   - Ensure your `package.json` has the correct build script
+   - Create/update your `.env.production` file with production environment variables:
+     ```
+     REACT_APP_API_URL=https://your-backend-url.com/api
+     REACT_APP_CONTACT_EMAIL=your-email@example.com
+     REACT_APP_CONTACT_PHONE=+1-234-567-8900
+     REACT_APP_CONTACT_LOCATION=City, Country
+     REACT_APP_LINKEDIN_URL=https://linkedin.com/in/your-profile
+     REACT_APP_GITHUB_URL=https://github.com/your-profile
+     REACT_APP_TWITTER_URL=https://twitter.com/your-profile
+     ```
+
+2. **Deploy to Netlify:**
+   - Option 1 (Recommended): Link your GitHub repository to Netlify
+     - Go to [Netlify Dashboard](https://app.netlify.com/)
+     - Click "Add new site" → "Import an existing project"
+     - Choose your Git provider and select your portfolio repository
+     - Configure build settings:
+       - Build Command: `npm run build`
+       - Publish Directory: `build`
+       - Additional Configuration (optional):
+         - Base directory: `portfolio/frontend`
+     - Add your environment variables in the "Advanced" section → "New Variable"
+     - Click "Deploy Site"
+
+   - Option 2 (Drag and Drop):
+     ```bash
+     cd portfolio/frontend
+     npm run build
+     ```
+     - Go to [Netlify Drop](https://app.netlify.com/drop)
+     - Drag and drop the `build` folder to deploy
+
+   - Option 3 (Netlify CLI):
+     ```bash
+     # Install Netlify CLI
+     npm install -g netlify-cli
+
+     # Navigate to frontend directory
+     cd portfolio/frontend
+
+     # Build the project
+     npm run build
+
+     # Deploy using Netlify CLI
+     netlify deploy --prod
+     ```
+
+3. **Configure Custom Domain (Optional):**
+   - In your Netlify dashboard, go to your site settings
+   - Navigate to "Domain Management" and add your custom domain
+   - Update DNS settings as instructed
+
+4. **Post-Deployment:**
+   - Your application will be accessible at `https://your-site-name.netlify.app`
+   - Monitor deployments in your Netlify dashboard
+   - Set up continuous deployment from your Git repository
+   - Configure redirects and headers in `_redirects` file if needed
+
+### 🔄 Backend API Deployment
+
+For the frontend to work properly on Vercel or Netlify, you'll need to deploy the backend API separately:
+
+1. **Deploy Backend to Heroku, AWS, Google Cloud, or similar platform**
+2. **Update Frontend Environment Variables** to point to your deployed backend API URL
+3. **Configure CORS** in your backend to allow requests from your frontend domain
+
+Example for deployed backend:
+```
+REACT_APP_API_URL=https://your-deployed-backend.herokuapp.com/api
+```
 
 ## 🔄 CI/CD Pipelines
 
@@ -326,11 +458,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Hamman Muraya** is a **Senior Software Engineer & DevOps Specialist** with over 8 years of experience designing, building, and deploying secure, scalable cloud-native systems for fintech and SaaS organizations. 🧠
+**Hamman Muraya** is a **Software & DevOps Engineer** with over 8 years of experience designing, building, and deploying secure, scalable cloud-native systems for fintech and SaaS organizations. 🧠
 
 He holds a **PhD in Software Engineering** and has expertise in multiple programming languages, cloud platforms, and DevOps practices. 🎓
 
-[![Contact](https://img.shields.io/badge/Contact-Hamman%20Muraya-blue?style=for-the-badge)](mailto:muraya.h@yahoo.com)
+[![Contact](https://img.shields.io/badge/Contact-Hamman%20Muraya-blue?style=for-the-badge)](mailto:hamanmuraya009@gmail.com)
 
 </div>
 

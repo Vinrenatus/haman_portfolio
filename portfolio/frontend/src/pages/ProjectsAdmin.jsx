@@ -26,7 +26,7 @@ const ProjectsAdmin = () => {
 
   const fetchProjectsData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/projects", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/projects", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -54,7 +54,7 @@ const ProjectsAdmin = () => {
       // Convert technologies string to array
       const technologiesArray = newProject.technologies.split(',').map(t => t.trim());
       
-      const response = await fetch("http://localhost:5000/api/projects", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/projects", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,7 +93,7 @@ const ProjectsAdmin = () => {
       // Convert technologies string to array
       const technologiesArray = updatedProject.technologies.split(',').map(t => t.trim());
 
-      const response = await fetch("http://localhost:5000/api/projects", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/projects", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -123,7 +123,7 @@ const ProjectsAdmin = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/projects", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/projects", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

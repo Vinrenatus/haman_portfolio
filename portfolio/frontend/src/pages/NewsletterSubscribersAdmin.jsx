@@ -16,7 +16,7 @@ const NewsletterSubscribersAdmin = () => {
 
   const fetchSubscribers = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/newsletter", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/newsletter", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -41,7 +41,7 @@ const NewsletterSubscribersAdmin = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/newsletter", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/newsletter", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

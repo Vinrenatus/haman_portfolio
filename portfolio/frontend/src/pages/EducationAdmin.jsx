@@ -23,7 +23,7 @@ const EducationAdmin = () => {
 
   const fetchEducationData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/education", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/education", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -48,7 +48,7 @@ const EducationAdmin = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/education", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/education", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const EducationAdmin = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/education", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/education", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

@@ -36,7 +36,7 @@ const ResumeAdmin = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch("http://localhost:5000/api/resume", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/resume", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -62,7 +62,7 @@ const ResumeAdmin = () => {
   };
 
   const handleDownload = () => {
-    window.open("http://localhost:5000/api/resume", "_blank");
+    window.open("https://hamman-portfolio-backend.onrender.com/api/resume", "_blank");
   };
 
   return (

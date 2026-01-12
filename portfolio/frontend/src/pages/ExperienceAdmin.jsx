@@ -23,7 +23,7 @@ const ExperienceAdmin = () => {
 
   const fetchExperienceData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/experience", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/experience", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -48,7 +48,7 @@ const ExperienceAdmin = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/experience", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/experience", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,7 +78,7 @@ const ExperienceAdmin = () => {
 
   const handleUpdateExperience = async (index, updatedExp) => {
     try {
-      const response = await fetch("http://localhost:5000/api/experience", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/experience", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -104,7 +104,7 @@ const ExperienceAdmin = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/experience", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/experience", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

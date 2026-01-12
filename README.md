@@ -110,11 +110,11 @@ The application can be deployed using:
 
 <div align="center">
 
-**Hamman Muraya** is a **Senior Software Engineer & DevOps Specialist** with over 8 years of experience designing, building, and deploying secure, scalable cloud-native systems for fintech and SaaS organizations. 🧠
+**Hamman Muraya** is a **Software & DevOps Engineer** with over 8 years of experience designing, building, and deploying secure, scalable cloud-native systems for fintech and SaaS organizations. 🧠
 
 He holds a **PhD in Software Engineering** and has expertise in multiple programming languages, cloud platforms, and DevOps practices. 🎓
 
-[![Contact](https://img.shields.io/badge/Contact-Hamman%20Muraya-blue?style=for-the-badge)](mailto:muraya.h@yahoo.com)
+[![Contact](https://img.shields.io/badge/Contact-Hamman%20Muraya-blue?style=for-the-badge)](mailto:hamanmuraya009@gmail.com)
 
 </div>
 

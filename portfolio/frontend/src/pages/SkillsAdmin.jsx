@@ -21,7 +21,7 @@ const SkillsAdmin = () => {
 
   const fetchSkillsData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/skills", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/skills", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -46,7 +46,7 @@ const SkillsAdmin = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/skills", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/skills", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -74,7 +74,7 @@ const SkillsAdmin = () => {
 
   const handleUpdateSkill = async (index, updatedSkill) => {
     try {
-      const response = await fetch("http://localhost:5000/api/skills", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/skills", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +100,7 @@ const SkillsAdmin = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/skills", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/skills", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

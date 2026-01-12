@@ -16,7 +16,7 @@ const ContactMessagesAdmin = () => {
 
   const fetchMessagesData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/contact-messages", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/contact-messages", {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -41,7 +41,7 @@ const ContactMessagesAdmin = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact-messages", {
+      const response = await fetch("https://hamman-portfolio-backend.onrender.com/api/contact-messages", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
