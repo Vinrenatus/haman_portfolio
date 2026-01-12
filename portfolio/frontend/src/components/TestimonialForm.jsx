@@ -59,10 +59,11 @@ const TestimonialForm = ({ onSubmission }) => {
             id="testimonialName"
             value={testimonial.name}
             onChange={(e) => setTestimonial({...testimonial, name: e.target.value})}
+            placeholder="Enter your full name"
             required
           />
         </div>
-        
+
         <div className="form-group">
           <label htmlFor="testimonialTitle">Your Title</label>
           <input
@@ -70,9 +71,10 @@ const TestimonialForm = ({ onSubmission }) => {
             id="testimonialTitle"
             value={testimonial.title}
             onChange={(e) => setTestimonial({...testimonial, title: e.target.value})}
+            placeholder="Enter your job title"
           />
         </div>
-        
+
         <div className="form-group">
           <label htmlFor="testimonialCompany">Company</label>
           <input
@@ -80,15 +82,17 @@ const TestimonialForm = ({ onSubmission }) => {
             id="testimonialCompany"
             value={testimonial.company}
             onChange={(e) => setTestimonial({...testimonial, company: e.target.value})}
+            placeholder="Enter your company name"
           />
         </div>
-        
+
         <div className="form-group">
           <label htmlFor="testimonialContent">Your Testimonial *</label>
           <textarea
             id="testimonialContent"
             value={testimonial.content}
             onChange={(e) => setTestimonial({...testimonial, content: e.target.value})}
+            placeholder="Share your experience and thoughts about our services..."
             required
             rows="5"
           ></textarea>
