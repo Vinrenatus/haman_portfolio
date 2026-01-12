@@ -9,10 +9,10 @@
   --primary-color: #FF6B35; /* Luminous orange */
   --secondary-color: #F7931E; /* Vibrant orange */
   --accent-color: #FFD700; /* Gold */
-  --text-color: #1f2937; /* Dark gray */
-  --light-text: #6b7280; /* Medium gray */
-  --bg-color: #F9FAFB; /* Light gray-white */
-  --card-bg: #FFFFFF; /* Pure white */
+  --text-color: #FF0000; /* Red text */
+  --light-text: #000000; /* Black text */
+  --bg-color: linear-gradient(135deg, #808080 0%, #87CEEB 100%); /* Grey to light sky blue gradient */
+  --card-bg: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
   --border-color: #E5E7EB; /* Light gray */
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --gradient-start: #FF6B35; /* Luminous orange */
@@ -43,25 +43,64 @@
   --gradient-vibrant: linear-gradient(135deg, #FF6B35 0%, #FFD700 50%, #32CD32 100%); /* Vibrant tri-color */
 }
 
-/* Dark theme variables */
-[data-theme="dark"] {
-  --primary-color: #FF8C00; /* Dark orange */
-  --secondary-color: #FFA500; /* Orange */
-  --accent-color: #FFD700; /* Gold */
-  --text-color: #F9FAFB;
-  --light-text: #D1D5DB;
+/* Dark theme variables (now default) */
+[data-theme="dark"], :root {
+  --primary-color: #FFD700; /* Gold */
+  --secondary-color: #FFFF00; /* Yellow */
+  --accent-color: #FF0000; /* Red */
+  --text-color: #FFFF00; /* Luminous yellow */
+  --light-text: #FFD700; /* Gold */
   --bg-color: #111827; /* Dark blue-gray */
   --card-bg: #1F293B; /* Darker blue-gray */
   --border-color: #374151; /* Medium blue-gray */
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-  --gradient-start: #FF8C00; /* Dark orange */
-  --gradient-end: #FFD700; /* Gold */
+  --gradient-start: #FFD700; /* Gold */
+  --gradient-end: #FF0000; /* Red */
   --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.3);
   --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Dark theme luminous and metallic gradients */
-  --gradient-excellence: linear-gradient(135deg, #FF6B35 0%, #FF8C00 100%); /* Luminous orange excellence */
+  --gradient-excellence: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%); /* Luminous yellow-gold excellence */
+  --gradient-executive: linear-gradient(135deg, #FFD700 0%, #FF0000 100%); /* Gold-red executive */
+  --gradient-elegance: linear-gradient(135deg, #FFD700 0%, #FFFF00 100%); /* Gold-yellow elegance */
+  --gradient-trust: linear-gradient(135deg, #FFFF00 0%, #FF0000 100%); /* Yellow-red trust */
+  --gradient-professional: linear-gradient(135deg, #C0C0C0 0%, #A9A9A9 100%); /* Silver professional */
+  --gradient-reliable: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%); /* Yellow-gold reliable */
+  --gradient-authority: linear-gradient(135deg, #FFD700 0%, #FF0000 100%); /* Gold-red authority */
+  --gradient-success: linear-gradient(135deg, #FFFF00 0%, #FF0000 100%); /* Yellow-red success */
+  --gradient-premium: linear-gradient(135deg, #FFD700 0%, #FFFF00 100%); /* Gold-yellow premium */
+  --gradient-elite: linear-gradient(135deg, #FFFF00 0%, #FF0000 100%); /* Yellow-red elite */
+  --gradient-royal: linear-gradient(135deg, #FFD700 0%, #FF0000 100%); /* Gold-red royal */
+  --gradient-noble: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%); /* Yellow-gold noble */
+  --gradient-distinguished: linear-gradient(135deg, #C0C0C0 0%, #FFD700 100%); /* Silver-gold distinguished */
+  --gradient-refined: linear-gradient(135deg, #FFFF00 0%, #FF0000 100%); /* Yellow-red refined */
+  --gradient-classic: linear-gradient(135deg, #FFD700 0%, #FF0000 100%); /* Gold-red classic */
+  --gradient-sterling: linear-gradient(135deg, #C0C0C0 0%, #808080 100%); /* Sterling silver */
+  --gradient-luminous: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%); /* Yellow-gold luminous */
+  --gradient-metallic: linear-gradient(135deg, #C0C0C0 0%, #FFD700 100%); /* Metallic silver-gold */
+  --gradient-vibrant: linear-gradient(135deg, #FFFF00 0%, #FFD700 50%, #FF0000 100%); /* Vibrant yellow-gold-red */
+}
+
+/* Light theme variables */
+[data-theme="light"] {
+  --primary-color: #FF6B35; /* Luminous orange */
+  --secondary-color: #F7931E; /* Vibrant orange */
+  --accent-color: #FFD700; /* Gold */
+  --text-color: #FF0000; /* Red text */
+  --light-text: #000000; /* Black text */
+  --bg-color: linear-gradient(135deg, #808080 0%, #87CEEB 100%); /* Grey to light sky blue gradient */
+  --card-bg: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  --border-color: #E5E7EB; /* Light gray */
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --gradient-start: #FF6B35; /* Luminous orange */
+  --gradient-end: #F7931E; /* Vibrant orange */
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Light theme luminous and metallic gradients */
+  --gradient-excellence: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); /* Luminous orange excellence */
   --gradient-executive: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%); /* Executive orange */
   --gradient-elegance: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Gold elegance */
   --gradient-trust: linear-gradient(135deg, #32CD32 0%, #00FF7F 100%); /* Luminous green trust */

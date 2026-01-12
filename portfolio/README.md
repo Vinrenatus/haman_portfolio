@@ -24,7 +24,7 @@ A cutting-edge portfolio website showcasing the skills and projects of **Hamman 
 - 💬 **Testimonials Section** - Client feedback and reviews
 - 📝 **Articles & Publications** - Knowledge sharing platform
 - 📧 **Newsletter Subscription** - Stay updated feature
-- 📄 **Resume Download Functionality** - Easy access to CV
+- 📄 **CV Redirect** - Redirect to online CV at https://rxresu.me/vrugundu001/hamman-muraya-2
 - 🔗 **Social Media Integration** - Seamless connectivity
 
 ### 🔐 Admin Dashboard

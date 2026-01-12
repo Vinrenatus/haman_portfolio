@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { fetchPortfolioData, fetchExperienceData, fetchCertificationsData, fetchTestimonialsData, fetchArticlesData } from "../utils/api";
 import Hero from "../components/Hero";
@@ -21,7 +21,7 @@ const Home = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const [portfolio, exp, certs, test, arts] = await Promise.all([
+      const [portfolio, exp, certs, test, arts] = await Promise.allSettled([
         fetchPortfolioData(),
         fetchExperienceData(),
         fetchCertificationsData(),
@@ -29,11 +29,23 @@ const Home = () => {
         fetchArticlesData()
       ]);
 
-      setPortfolioData(portfolio);
-      setExperience(exp.experience || []);
-      setCertifications(certs.certifications || []);
-      setTestimonials(test.testimonials || []);
-      setArticles(arts.articles || []);
+      // Handle results individually to prevent one failure from stopping all
+      const portfolioResult = portfolio.status === 'fulfilled' ? portfolio.value : null;
+      const expResult = exp.status === 'fulfilled' ? exp.value : { experience: [] };
+      const certsResult = certs.status === 'fulfilled' ? certs.value : { certifications: [] };
+      const testResult = test.status === 'fulfilled' ? test.value : { testimonials: [] };
+      const artsResult = arts.status === 'fulfilled' ? arts.value : { articles: [] };
+
+      setPortfolioData(portfolioResult);
+      setExperience(expResult.experience || []);
+      setCertifications(certsResult.certifications || []);
+      setTestimonials(testResult.testimonials || []);
+      setArticles(artsResult.articles || []);
+
+      // Set error only if portfolio failed (critical data)
+      if (portfolio.status === 'rejected') {
+        setError(portfolio.reason?.message || 'Failed to load portfolio data');
+      }
     } catch (err) {
       setError(err.message);
     } finally {
@@ -49,7 +61,9 @@ const Home = () => {
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (!document.hidden) {
-        fetchData();
+        // Debounce refresh to avoid multiple calls
+        const timeoutId = setTimeout(fetchData, 1000);
+        return () => clearTimeout(timeoutId);
       }
     };
 
@@ -59,56 +73,61 @@ const Home = () => {
     };
   }, []);
 
-  if (loading) {
-    return <div className="loading">Loading...</div>;
+  if (loading && !portfolioData) {
+    return <div className="loading">Loading portfolio...</div>;
   }
 
-  if (error) {
-    return <div className="loading">Error: {error}</div>;
+  if (error && !portfolioData) {
+    return <div className="loading">Error: {error}. Retrying...</div>;
   }
 
-  if (!portfolioData) {
-    return <div className="loading">No data available</div>;
-  }
+  // Memoize components to prevent unnecessary re-renders
+  const heroSection = useMemo(() => (
+    <Hero portfolioData={portfolioData} />
+  ), [portfolioData]);
+
+  const aboutSection = useMemo(() => (
+    <section id="about" className="about-section">
+      <div className="container">
+        <div className="section-header">
+          <h2 className="section-title">About Me</h2>
+          <div className="section-divider"></div>
+        </div>
+        <div className="about-content">
+          <p className="about-description">{portfolioData?.about}</p>
+        </div>
+
+        <div className="education-section">
+          <h3 className="subsection-title">Education</h3>
+          <div className="education-grid">
+            {(portfolioData?.education || []).map((edu, index) => (
+              <div key={`${edu.degree}-${index}`} className="education-card">
+                <div className="education-icon">
+                  <i className="fas fa-graduation-cap"></i>
+                </div>
+                <div className="education-details">
+                  <h4 className="education-degree">{edu.degree}</h4>
+                  <p className="education-institution">{edu.institution} - {edu.year}</p>
+                  <p className="education-desc">{edu.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  ), [portfolioData]);
 
   return (
     <div className="home">
       {/* Hero Section with Sliding Images */}
-      <Hero portfolioData={portfolioData} />
+      {heroSection}
 
       {/* About Section */}
-      <section id="about" className="about-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">About Me</h2>
-            <div className="section-divider"></div>
-          </div>
-          <div className="about-content">
-            <p className="about-description">{portfolioData.about}</p>
-          </div>
-
-          <div className="education-section">
-            <h3 className="subsection-title">Education</h3>
-            <div className="education-grid">
-              {portfolioData.education.map((edu, index) => (
-                <div key={index} className="education-card">
-                  <div className="education-icon">
-                    <i className="fas fa-graduation-cap"></i>
-                  </div>
-                  <div className="education-details">
-                    <h4 className="education-degree">{edu.degree}</h4>
-                    <p className="education-institution">{edu.institution} - {edu.year}</p>
-                    <p className="education-desc">{edu.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {aboutSection}
 
       {/* Skills Section */}
-      <Skills skills={portfolioData.skills} />
+      <Skills skills={portfolioData?.skills || []} />
 
       {/* Experience Section */}
       <Experience experience={experience} />
