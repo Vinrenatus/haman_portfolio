@@ -50,8 +50,8 @@
   --accent-color: #FF0000; /* Red */
   --text-color: #FFFF00; /* Luminous yellow */
   --light-text: #FFD700; /* Gold */
-  --bg-color: #111827; /* Dark blue-gray */
-  --card-bg: #1F293B; /* Darker blue-gray */
+  --bg-color: #000080; /* Navy blue dark */
+  --card-bg: #101080; /* Darker navy */
   --border-color: #374151; /* Medium blue-gray */
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
   --gradient-start: #FFD700; /* Gold */

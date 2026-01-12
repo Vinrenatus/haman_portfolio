@@ -16,7 +16,7 @@ A cutting-edge portfolio website showcasing the skills and projects of **Hamman 
 
 ### 🎨 Frontend Excellence
 - 📱 **Responsive Design** - Works flawlessly on all devices
-- 🌙 **Dark/Light Mode Toggle** - Eye-friendly themes
+- 🌙 **Dark/Light Mode Toggle** - Navy blue dark background in dark mode, light themes in light mode
 - 🎯 **Project Showcase** - Detailed descriptions with category filtering
 - 📊 **Skills Visualization** - Interactive progress bars
 - 📅 **Work Experience Timeline** - Chronological career journey
@@ -25,6 +25,12 @@ A cutting-edge portfolio website showcasing the skills and projects of **Hamman 
 - 📝 **Articles & Publications** - Knowledge sharing platform
 - 📧 **Newsletter Subscription** - Stay updated feature
 - 📄 **CV Redirect** - Redirect to online CV at https://rxresu.me/vrugundu001/hamman-muraya-2
+- 🖼️ **Dynamic Images** - Professional coding imagery from Pexels:
+  - [Data codes through eyeglasses](https://www.pexels.com/photo/data-codes-through-eyeglasses-577585/)
+  - [Group of people discussing](https://www.pexels.com/photo/top-view-photo-of-group-of-people-using-macbook-while-discussing-3182773/)
+  - [Code projected over woman](https://www.pexels.com/photo/code-projected-over-woman-3861969/)
+  - [Woman programming on notebook](https://www.pexels.com/photo/woman-programming-on-a-notebook-1181359/)
+  - [Codes on tilt shift lens](https://www.pexels.com/photo/codes-on-tilt-shift-lens-2004161/)
 - 🔗 **Social Media Integration** - Seamless connectivity
 
 ### 🔐 Admin Dashboard
