@@ -1,7 +1,7 @@
 /* Articles section */
 .articles {
   padding: 5rem 0;
-  background-color: #f8fafc;
+  background-color: var(--bg-color);
 }
 
 .articles .container {
@@ -12,6 +12,7 @@
   font-size: 2.5rem;
   margin-bottom: 3rem;
   text-align: center;
+  color: var(--text-color);
 }
 
 .articles-grid {
@@ -21,11 +22,12 @@
 }
 
 .article-card {
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .article-card:hover {
@@ -44,12 +46,13 @@
 }
 
 .tag {
-  background-color: #dbeafe;
+  background-color: var(--bg-color);
   color: var(--primary-color);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
+  border: 1px solid var(--border-color);
 }
 
 .article-card h3 {
@@ -87,6 +90,21 @@
 
 .read-more:hover {
   color: var(--secondary-color);
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .articles {
+  background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .article-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .tag {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
 }
 
 /* Responsive styles */
