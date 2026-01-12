@@ -138,6 +138,20 @@ body {
   box-sizing: border-box;
 }
 
+/* Ensure images are always clear without color overlays */
+img, .image-container, .slide-image, .testimonial-avatar {
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+[data-theme="dark"] img,
+[data-theme="dark"] .image-container,
+[data-theme="dark"] .slide-image,
+[data-theme="dark"] .testimonial-avatar {
+  filter: brightness(1) contrast(1) saturate(1) !important;
+  mix-blend-mode: normal !important;
+}
+
 body {
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   color: var(--text-color);

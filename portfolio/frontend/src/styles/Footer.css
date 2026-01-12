@@ -1,8 +1,9 @@
 /* Footer styles */
 .footer {
-  background: var(--gradient-reliable);
+  background-color: var(--bg-color);
   padding: 2rem 0 1rem;
   margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .footer-container {
@@ -94,8 +95,8 @@
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   margin: 1.5rem 0;
-  background: var(--gradient-trust);
-  color: white;
+  background-color: var(--card-bg);
+  color: var(--text-color);
 }
 
 .newsletter-section h3 {
@@ -173,16 +174,35 @@
   color: var(--light-text);
 }
 
+/* Dark mode specific styles to match navbar */
+[data-theme="dark"] .footer {
+  background-color: #000066; /* Match dark navbar color */
+  border-top: 1px solid #00004d; /* Match dark border color */
+}
+
+[data-theme="dark"] .newsletter-section {
+  background-color: #00004d; /* Slightly darker than footer */
+}
+
+/* Ensure images are clear without hue overlay */
+img {
+  filter: none !important;
+}
+
+[data-theme="dark"] img {
+  filter: brightness(1) contrast(1) saturate(1);
+}
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .footer-container {
     text-align: center;
   }
-  
+
   .social-links {
     justify-content: center;
   }
-  
+
   .footer-bottom {
     text-align: center;
   }
