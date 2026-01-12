@@ -25,12 +25,7 @@ A cutting-edge portfolio website showcasing the skills and projects of **Hamman 
 - 📝 **Articles & Publications** - Knowledge sharing platform
 - 📧 **Newsletter Subscription** - Stay updated feature
 - 📄 **CV Redirect** - Redirect to online CV at https://rxresu.me/vrugundu001/hamman-muraya-2
-- 🖼️ **Dynamic Images** - Professional coding imagery from Pexels:
-  - [Data codes through eyeglasses](https://www.pexels.com/photo/data-codes-through-eyeglasses-577585/)
-  - [Group of people discussing](https://www.pexels.com/photo/top-view-photo-of-group-of-people-using-macbook-while-discussing-3182773/)
-  - [Code projected over woman](https://www.pexels.com/photo/code-projected-over-woman-3861969/)
-  - [Woman programming on notebook](https://www.pexels.com/photo/woman-programming-on-a-notebook-1181359/)
-  - [Codes on tilt shift lens](https://www.pexels.com/photo/codes-on-tilt-shift-lens-2004161/)
+- 🖼️ **Dynamic Images** - Professional coding imagery from Pexels: [Coding Workspace](https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg)
 - 🔗 **Social Media Integration** - Seamless connectivity
 
 ### 🔐 Admin Dashboard
@@ -83,7 +78,7 @@ A cutting-edge portfolio website showcasing the skills and projects of **Hamman 
 | Primary | #FF6B35 | Main brand color (orange) |
 | Secondary | #F7931E | Supporting color (orange) |
 | Accent | #FFD700 | Highlight elements (gold) |
-| Text | #1f2937 / #e5e7eb | Text in light/dark mode |
+| Text | #000000 / #FFFFFF | High contrast text in light/dark mode |
 | Background | #ffffff / #000080 | Light/dark mode backgrounds |
 
 ## 🚀 Quick Start

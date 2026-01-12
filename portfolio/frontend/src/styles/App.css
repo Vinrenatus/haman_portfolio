@@ -9,11 +9,11 @@
   --primary-color: #FF6B35; /* Orange */
   --secondary-color: #F7931E; /* Secondary orange */
   --accent-color: #FFD700; /* Gold accent */
-  --text-color: #1f2937; /* Dark gray text */
-  --light-text: #6b7280; /* Light gray text */
+  --text-color: #000000; /* Black text for better contrast */
+  --light-text: #4b5563; /* Darker gray text */
   --bg-color: #ffffff; /* White background */
   --card-bg: #f9fafb; /* Light gray card background */
-  --border-color: #e5e7eb; /* Light gray border */
+  --border-color: #d1d5db; /* Medium gray border */
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --gradient-start: #FF6B35; /* Orange */
   --gradient-end: #F7931E; /* Secondary orange */
@@ -29,12 +29,12 @@
 [data-theme="dark"], :root {
   --primary-color: #FFD700; /* Gold */
   --secondary-color: #FFA500; /* Orange */
-  --accent-color: #FF0000; /* Red accent */
-  --text-color: #e5e7eb; /* Light gray text */
-  --light-text: #d1d5db; /* Lighter gray text */
+  --accent-color: #FF6B35; /* Orange accent for contrast */
+  --text-color: #ffffff; /* White text for better contrast */
+  --light-text: #e5e7eb; /* Light gray text */
   --bg-color: #000080; /* Navy blue dark */
-  --card-bg: #101080; /* Darker navy */
-  --border-color: #374151; /* Medium gray */
+  --card-bg: #1a1a9e; /* Slightly lighter navy */
+  --border-color: #4f46e5; /* Indigo border for contrast */
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
   --gradient-start: #FFD700; /* Gold */
   --gradient-end: #FFA500; /* Orange */
@@ -51,11 +51,11 @@
   --primary-color: #FF6B35; /* Orange */
   --secondary-color: #F7931E; /* Secondary orange */
   --accent-color: #FFD700; /* Gold accent */
-  --text-color: #1f2937; /* Dark gray text */
-  --light-text: #6b7280; /* Light gray text */
+  --text-color: #000000; /* Black text for better contrast */
+  --light-text: #4b5563; /* Darker gray text */
   --bg-color: #ffffff; /* White background */
   --card-bg: #f9fafb; /* Light gray card background */
-  --border-color: #e5e7eb; /* Light gray border */
+  --border-color: #d1d5db; /* Medium gray border */
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --gradient-start: #FF6B35; /* Orange */
   --gradient-end: #F7931E; /* Secondary orange */
