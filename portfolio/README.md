@@ -74,8 +74,17 @@ A cutting-edge portfolio website showcasing the skills and projects of **Hamman 
 | [React Router](https://reactrouter.com/) | 6.15.0 | Navigation and routing |
 | [Bootstrap](https://getbootstrap.com/) | 5.3.8 | Responsive CSS framework |
 | [Reactstrap](https://reactstrap.github.io/) | 9.2.3 | Bootstrap components for React |
-| [Tailwind CSS](https://tailwindcss.com/) | 3.4.19 | Utility-first CSS framework |
+| [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) | - | Custom styling with simplified color palette |
 | [Font Awesome](https://fontawesome.com/) | 6.7.2 | Icon library |
+
+### 🎨 Color Palette
+| Color | Hex Code | Usage |
+|-------|----------|-------|
+| Primary | #FF6B35 | Main brand color (orange) |
+| Secondary | #F7931E | Supporting color (orange) |
+| Accent | #FFD700 | Highlight elements (gold) |
+| Text | #1f2937 / #e5e7eb | Text in light/dark mode |
+| Background | #ffffff / #000080 | Light/dark mode backgrounds |
 
 ## 🚀 Quick Start
 

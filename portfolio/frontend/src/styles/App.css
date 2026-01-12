@@ -6,167 +6,85 @@
 }
 
 :root {
-  --primary-color: #FF6B35; /* Luminous orange */
-  --secondary-color: #F7931E; /* Vibrant orange */
-  --accent-color: #FFD700; /* Gold */
-  --text-color: #FF0000; /* Red text */
-  --light-text: #000000; /* Black text */
-  --bg-color: linear-gradient(135deg, #808080 0%, #87CEEB 100%); /* Grey to light sky blue gradient */
-  --card-bg: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-  --border-color: #E5E7EB; /* Light gray */
+  --primary-color: #FF6B35; /* Orange */
+  --secondary-color: #F7931E; /* Secondary orange */
+  --accent-color: #FFD700; /* Gold accent */
+  --text-color: #1f2937; /* Dark gray text */
+  --light-text: #6b7280; /* Light gray text */
+  --bg-color: #ffffff; /* White background */
+  --card-bg: #f9fafb; /* Light gray card background */
+  --border-color: #e5e7eb; /* Light gray border */
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --gradient-start: #FF6B35; /* Luminous orange */
-  --gradient-end: #F7931E; /* Vibrant orange */
+  --gradient-start: #FF6B35; /* Orange */
+  --gradient-end: #F7931E; /* Secondary orange */
   --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.1);
   --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Luminous and metallic gradients */
-  --gradient-excellence: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); /* Luminous orange excellence */
-  --gradient-executive: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%); /* Executive orange */
-  --gradient-elegance: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Gold elegance */
-  --gradient-trust: linear-gradient(135deg, #32CD32 0%, #00FF7F 100%); /* Luminous green trust */
-  --gradient-professional: linear-gradient(135deg, #C0C0C0 0%, #A9A9A9 100%); /* Silver professional */
-  --gradient-reliable: linear-gradient(135deg, #FF6B35 0%, #FFD700 100%); /* Orange-gold reliable */
-  --gradient-authority: linear-gradient(135deg, #F7931E 0%, #FFD700 100%); /* Orange-gold authority */
-  --gradient-success: linear-gradient(135deg, #32CD32 0%, #00FF7F 100%); /* Luminous green success */
-  --gradient-premium: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Gold-orange premium */
-  --gradient-elite: linear-gradient(135deg, #FF6B35 0%, #FF1493 100%); /* Luminous orange-pink elite */
-  --gradient-royal: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%); /* Gold-orange royal */
-  --gradient-noble: linear-gradient(135deg, #32CD32 0%, #20B2AA 100%); /* Luminous green-teal noble */
-  --gradient-distinguished: linear-gradient(135deg, #C0C0C0 0%, #FFD700 100%); /* Silver-gold distinguished */
-  --gradient-refined: linear-gradient(135deg, #00FF7F 0%, #32CD32 100%); /* Luminous mint-green refined */
-  --gradient-classic: linear-gradient(135deg, #FF8C00 0%, #FF6B35 100%); /* Classic orange-red */
-  --gradient-sterling: linear-gradient(135deg, #C0C0C0 0%, #808080 100%); /* Sterling silver */
-  --gradient-luminous: linear-gradient(135deg, #FF6B35 0%, #00FF7F 100%); /* Luminous orange-green */
-  --gradient-metallic: linear-gradient(135deg, #C0C0C0 0%, #FFD700 100%); /* Metallic silver-gold */
-  --gradient-vibrant: linear-gradient(135deg, #FF6B35 0%, #FFD700 50%, #32CD32 100%); /* Vibrant tri-color */
+  /* Simplified gradients */
+  --gradient-accent: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 /* Dark theme variables (now default) */
 [data-theme="dark"], :root {
   --primary-color: #FFD700; /* Gold */
-  --secondary-color: #FFFF00; /* Yellow */
-  --accent-color: #FF0000; /* Red */
-  --text-color: #FFFF00; /* Luminous yellow */
-  --light-text: #FFD700; /* Gold */
+  --secondary-color: #FFA500; /* Orange */
+  --accent-color: #FF0000; /* Red accent */
+  --text-color: #e5e7eb; /* Light gray text */
+  --light-text: #d1d5db; /* Lighter gray text */
   --bg-color: #000080; /* Navy blue dark */
   --card-bg: #101080; /* Darker navy */
-  --border-color: #374151; /* Medium blue-gray */
+  --border-color: #374151; /* Medium gray */
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
   --gradient-start: #FFD700; /* Gold */
-  --gradient-end: #FF0000; /* Red */
+  --gradient-end: #FFA500; /* Orange */
   --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.3);
   --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Dark theme luminous and metallic gradients */
-  --gradient-excellence: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%); /* Luminous yellow-gold excellence */
-  --gradient-executive: linear-gradient(135deg, #FFD700 0%, #FF0000 100%); /* Gold-red executive */
-  --gradient-elegance: linear-gradient(135deg, #FFD700 0%, #FFFF00 100%); /* Gold-yellow elegance */
-  --gradient-trust: linear-gradient(135deg, #FFFF00 0%, #FF0000 100%); /* Yellow-red trust */
-  --gradient-professional: linear-gradient(135deg, #C0C0C0 0%, #A9A9A9 100%); /* Silver professional */
-  --gradient-reliable: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%); /* Yellow-gold reliable */
-  --gradient-authority: linear-gradient(135deg, #FFD700 0%, #FF0000 100%); /* Gold-red authority */
-  --gradient-success: linear-gradient(135deg, #FFFF00 0%, #FF0000 100%); /* Yellow-red success */
-  --gradient-premium: linear-gradient(135deg, #FFD700 0%, #FFFF00 100%); /* Gold-yellow premium */
-  --gradient-elite: linear-gradient(135deg, #FFFF00 0%, #FF0000 100%); /* Yellow-red elite */
-  --gradient-royal: linear-gradient(135deg, #FFD700 0%, #FF0000 100%); /* Gold-red royal */
-  --gradient-noble: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%); /* Yellow-gold noble */
-  --gradient-distinguished: linear-gradient(135deg, #C0C0C0 0%, #FFD700 100%); /* Silver-gold distinguished */
-  --gradient-refined: linear-gradient(135deg, #FFFF00 0%, #FF0000 100%); /* Yellow-red refined */
-  --gradient-classic: linear-gradient(135deg, #FFD700 0%, #FF0000 100%); /* Gold-red classic */
-  --gradient-sterling: linear-gradient(135deg, #C0C0C0 0%, #808080 100%); /* Sterling silver */
-  --gradient-luminous: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%); /* Yellow-gold luminous */
-  --gradient-metallic: linear-gradient(135deg, #C0C0C0 0%, #FFD700 100%); /* Metallic silver-gold */
-  --gradient-vibrant: linear-gradient(135deg, #FFFF00 0%, #FFD700 50%, #FF0000 100%); /* Vibrant yellow-gold-red */
+  /* Simplified dark theme gradients */
+  --gradient-accent: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 /* Light theme variables */
 [data-theme="light"] {
-  --primary-color: #FF6B35; /* Luminous orange */
-  --secondary-color: #F7931E; /* Vibrant orange */
-  --accent-color: #FFD700; /* Gold */
-  --text-color: #FF0000; /* Red text */
-  --light-text: #000000; /* Black text */
-  --bg-color: linear-gradient(135deg, #808080 0%, #87CEEB 100%); /* Grey to light sky blue gradient */
-  --card-bg: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-  --border-color: #E5E7EB; /* Light gray */
+  --primary-color: #FF6B35; /* Orange */
+  --secondary-color: #F7931E; /* Secondary orange */
+  --accent-color: #FFD700; /* Gold accent */
+  --text-color: #1f2937; /* Dark gray text */
+  --light-text: #6b7280; /* Light gray text */
+  --bg-color: #ffffff; /* White background */
+  --card-bg: #f9fafb; /* Light gray card background */
+  --border-color: #e5e7eb; /* Light gray border */
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --gradient-start: #FF6B35; /* Luminous orange */
-  --gradient-end: #F7931E; /* Vibrant orange */
+  --gradient-start: #FF6B35; /* Orange */
+  --gradient-end: #F7931E; /* Secondary orange */
   --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.1);
   --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Light theme luminous and metallic gradients */
-  --gradient-excellence: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); /* Luminous orange excellence */
-  --gradient-executive: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%); /* Executive orange */
-  --gradient-elegance: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Gold elegance */
-  --gradient-trust: linear-gradient(135deg, #32CD32 0%, #00FF7F 100%); /* Luminous green trust */
-  --gradient-professional: linear-gradient(135deg, #C0C0C0 0%, #A9A9A9 100%); /* Silver professional */
-  --gradient-reliable: linear-gradient(135deg, #FF6B35 0%, #FFD700 100%); /* Orange-gold reliable */
-  --gradient-authority: linear-gradient(135deg, #F7931E 0%, #FFD700 100%); /* Orange-gold authority */
-  --gradient-success: linear-gradient(135deg, #32CD32 0%, #00FF7F 100%); /* Luminous green success */
-  --gradient-premium: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Gold-orange premium */
-  --gradient-elite: linear-gradient(135deg, #FF6B35 0%, #FF1493 100%); /* Luminous orange-pink elite */
-  --gradient-royal: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%); /* Gold-orange royal */
-  --gradient-noble: linear-gradient(135deg, #32CD32 0%, #20B2AA 100%); /* Luminous green-teal noble */
-  --gradient-distinguished: linear-gradient(135deg, #C0C0C0 0%, #FFD700 100%); /* Silver-gold distinguished */
-  --gradient-refined: linear-gradient(135deg, #00FF7F 0%, #32CD32 100%); /* Luminous mint-green refined */
-  --gradient-classic: linear-gradient(135deg, #FF8C00 0%, #FF6B35 100%); /* Classic orange-red */
-  --gradient-sterling: linear-gradient(135deg, #C0C0C0 0%, #808080 100%); /* Sterling silver */
-  --gradient-luminous: linear-gradient(135deg, #FF6B35 0%, #00FF7F 100%); /* Luminous orange-green */
-  --gradient-metallic: linear-gradient(135deg, #C0C0C0 0%, #FFD700 100%); /* Metallic silver-gold */
-  --gradient-vibrant: linear-gradient(135deg, #FF6B35 0%, #FFD700 50%, #32CD32 100%); /* Vibrant tri-color */
+  /* Simplified light theme gradients */
+  --gradient-accent: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
-/* Body gradient background */
+/* Body background */
 body {
-  background: var(--gradient-excellence);
+  background-color: var(--bg-color);
   background-attachment: fixed;
 }
 
 /* Gradient backgrounds */
-.bg-gradient-excellence { background: var(--gradient-excellence); color: white; }
-.bg-gradient-executive { background: var(--gradient-executive); color: white; }
-.bg-gradient-elegance { background: var(--gradient-elegance); color: white; }
-.bg-gradient-trust { background: var(--gradient-trust); color: white; }
-.bg-gradient-professional { background: var(--gradient-professional); color: white; }
-.bg-gradient-reliable { background: var(--gradient-reliable); color: white; }
-.bg-gradient-authority { background: var(--gradient-authority); color: white; }
-.bg-gradient-success { background: var(--gradient-success); color: white; }
-.bg-gradient-premium { background: var(--gradient-premium); color: white; }
-.bg-gradient-elite { background: var(--gradient-elite); color: white; }
-.bg-gradient-royal { background: var(--gradient-royal); color: white; }
-.bg-gradient-noble { background: var(--gradient-noble); color: white; }
-.bg-gradient-distinguished { background: var(--gradient-distinguished); color: white; }
-.bg-gradient-refined { background: var(--gradient-refined); color: white; }
-.bg-gradient-classic { background: var(--gradient-classic); color: white; }
-.bg-gradient-sterling { background: var(--gradient-sterling); color: white; }
+.bg-gradient-accent { background: var(--gradient-accent); color: white; }
 
 /* Card with gradient background */
 .card-gradient {
   background: var(--card-bg);
-  background: linear-gradient(145deg, var(--card-bg), #f0f4f8);
   border: 1px solid var(--border-color);
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   transition: var(--transition);
   position: relative;
   overflow: hidden;
-}
-
-.card-gradient::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(247, 147, 30, 0.05) 100%);
-  z-index: 0;
-  border-radius: 1rem;
 }
 
 .card-gradient-content {
@@ -177,10 +95,6 @@ body {
 /* Glowing effects for dark mode */
 [data-theme="dark"] .glow-orange {
   text-shadow: 0 0 5px rgba(255, 140, 0, 0.5), 0 0 10px rgba(255, 140, 0, 0.3), 0 0 15px rgba(255, 140, 0, 0.2);
-}
-
-[data-theme="dark"] .glow-green {
-  text-shadow: 0 0 5px rgba(50, 205, 50, 0.5), 0 0 10px rgba(50, 205, 50, 0.3), 0 0 15px rgba(50, 205, 50, 0.2);
 }
 
 [data-theme="dark"] .glow-effect {
@@ -198,7 +112,7 @@ body {
 }
 
 [data-theme="dark"] .hero-content h2 {
-  text-shadow: 0 0 8px rgba(50, 205, 50, 0.5), 0 0 16px rgba(50, 205, 50, 0.3);
+  text-shadow: 0 0 8px rgba(255, 140, 0, 0.5), 0 0 16px rgba(255, 140, 0, 0.3);
 }
 
 [data-theme="dark"] .btn-primary {
@@ -209,18 +123,12 @@ body {
   box-shadow: 0 0 15px rgba(255, 140, 0, 0.7);
 }
 
-[data-theme="dark"] .service-card {
-  transition: all 0.3s ease;
-}
-
-[data-theme="dark"] .service-card:hover {
-  box-shadow: 0 0 15px rgba(50, 205, 50, 0.5);
-}
-
+[data-theme="dark"] .service-card,
 [data-theme="dark"] .project-card {
   transition: all 0.3s ease;
 }
 
+[data-theme="dark"] .service-card:hover,
 [data-theme="dark"] .project-card:hover {
   box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
 }
