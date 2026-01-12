@@ -194,24 +194,79 @@ docker-compose up --build
 - **Port already in use**: Change PORT environment variable or kill the process using the port
 - **Database connection errors**: Ensure PostgreSQL is running and credentials are correct
 - **Missing dependencies**: Run `pip install -r requirements.txt` again
+- **Ubuntu-specific**: If you encounter issues with Python dependencies, ensure you have the required system packages:
+  ```bash
+  sudo apt update
+  sudo apt install python3-dev python3-pip python3-venv build-essential libssl-dev libffi-dev
+  ```
 
 #### Frontend Issues
 - **Port already in use**: Change PORT environment variable in .env file
 - **API connection errors**: Ensure backend is running and REACT_APP_API_URL is correct
 - **Module not found**: Run `npm install` to reinstall dependencies
+- **Ubuntu-specific**: If you encounter permission issues with npm, consider using a Node version manager:
+  ```bash
+  # Install n (Node version manager)
+  sudo npm install -g n
+  sudo n latest
+  ```
 
 #### Environment Setup
 Make sure your environment variables are properly set:
 - Backend: `DATABASE_URL`, `SECRET_KEY`, `FLASK_ENV`
 - Frontend: `REACT_APP_API_URL`, and other contact variables
 
-# Initialize database
-python init_db.py
+#### Ubuntu-Specific Setup
+For Ubuntu users, ensure you have the required packages installed:
 
-# Run the backend server
-python run.py
-```
-> The backend will be available at http://localhost:5000 🌐
+1. **Install Python and Node.js**:
+   ```bash
+   # Update package list
+   sudo apt update
+
+   # Install Python 3 and pip
+   sudo apt install python3 python3-pip python3-venv
+
+   # Install Node.js and npm
+   curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+   sudo apt install -y nodejs
+   ```
+
+2. **Install PostgreSQL** (if running locally):
+   ```bash
+   sudo apt install postgresql postgresql-contrib
+   sudo systemctl start postgresql
+   sudo systemctl enable postgresql
+
+   # Create a database user (optional)
+   sudo -u postgres createuser --interactive --p
+   ```
+
+3. **Ubuntu Firewall** (if enabled):
+   ```bash
+   # Allow traffic on development ports (if needed)
+   sudo ufw allow 3000
+   sudo ufw allow 5000
+   ```
+
+4. **Set up the project**:
+   ```bash
+   # Navigate to backend directory
+   cd portfolio/backend
+
+   # Create virtual environment
+   python3 -m venv venv
+
+   # Activate virtual environment
+   source venv/bin/activate
+
+   # Install dependencies
+   pip install -r requirements.txt
+   ```
+
+5. **Running on Ubuntu**:
+   - The application will be available at `http://localhost:3000` (frontend) and `http://localhost:5000` (backend)
+   - Ubuntu typically uses `python3` and `pip3` commands instead of `python` and `pip`
 
 #### ⚛️ Frontend Setup
 ```bash
