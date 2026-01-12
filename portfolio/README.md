@@ -25,7 +25,10 @@ A cutting-edge portfolio website showcasing the skills and projects of **Hamman 
 - 📝 **Articles & Publications** - Knowledge sharing platform
 - 📧 **Newsletter Subscription** - Stay updated feature
 - 📄 **CV Redirect** - Redirect to online CV at https://rxresu.me/vrugundu001/hamman-muraya-2
-- 🖼️ **Dynamic Images** - Professional coding imagery from Pexels: [Coding Workspace](https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg)
+- 🖼️ **Dynamic Images** - Professional coding imagery from Pexels:
+  - [Developer Coding](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg)
+  - [Code Projection](https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg)
+  - [Programming Desk](https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg)
 - 🔗 **Social Media Integration** - Seamless connectivity
 
 ### 🔐 Admin Dashboard
