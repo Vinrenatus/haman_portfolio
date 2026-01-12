@@ -73,14 +73,6 @@ const Home = () => {
     };
   }, []);
 
-  if (loading && !portfolioData) {
-    return <div className="loading">Loading portfolio...</div>;
-  }
-
-  if (error && !portfolioData) {
-    return <div className="loading">Error: {error}. Retrying...</div>;
-  }
-
   // Memoize components to prevent unnecessary re-renders
   const heroSection = useMemo(() => (
     <Hero portfolioData={portfolioData} />
@@ -117,6 +109,14 @@ const Home = () => {
       </div>
     </section>
   ), [portfolioData]);
+
+  if (loading && !portfolioData) {
+    return <div className="loading">Loading portfolio...</div>;
+  }
+
+  if (error && !portfolioData) {
+    return <div className="loading">Error: {error}. Retrying...</div>;
+  }
 
   return (
     <div className="home">
